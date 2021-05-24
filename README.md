@@ -10,4 +10,4 @@ Cox_Reg: A computational method to detect prognostic biomarkers of breast cancer
 6. net_cor_mi.R -- Enter net_in_inter_genes, integrate cor, increase MI. Then add 15 genes to form a network with 72 genes.
 7. gene_id_pvalue.R -- Use the P-value of DEG_res_order_TN.csv, two genes are NA.
 8. feature_select_use.R -- Use the data TCGA_BRCA_clin_1142_1080_scale.txt to extract 72 feature genes of all samples.
-9. Univariate_cox_for_72.R -- Perform univariate and multivariate Cox regression on 72 features, and output a table.
+9. Univariate_cox_for_72.R - Perform single-factor and multi-factor Cox regression for 72 features, save univariate_cox.csv. According to the multi-factor Cox, obtain the gene and coef of Risk Score.
