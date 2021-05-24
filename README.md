@@ -16,4 +16,5 @@ Cox_Reg: A computational method to detect prognostic biomarkers of breast cancer
 12. feature_select_NEW.R -- Extract univariate_cox_coef.csv data from Independent_data and save it in Data_GEO.
 13. feature_survival_external_index_NEW.R -- Extract data from Data_GEO and save it to Xtile.
 14. xtile.R -- Used to get the KM curve based on the threshold obtained by XTile.
-15. xtile_TCGA.R - Extract data from TCGA, save it in TCGA_OS_3gene.txt (clinical information + PRS), use the midpoint as cut-off, draw KM curve.
+15. xtile_TCGA.R -- Extract data from TCGA, save it in TCGA_OS_3gene.txt (clinical information + PRS), use the midpoint as cut-off, draw KM curve.
+16. feature_select_TCGA_NEW.R -- Get expression value of 3 genes, TCGA GSE_TCGA_3_ori.txt. Then get prs_TCGA_for_hiplot.txt, use hiplot to draw.
