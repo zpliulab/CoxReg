@@ -12,3 +12,4 @@ Cox_Reg: A computational method to detect prognostic biomarkers of breast cancer
 8. feature_select_use.R -- Use the data TCGA_BRCA_clin_1142_1080_scale.txt to extract 72 feature genes of all samples.
 9. Univariate_cox_for_72.R - Perform single-factor and multi-factor Cox regression for 72 features, save univariate_cox.csv. According to the multi-factor Cox, obtain the gene and coef of Risk Score.
 10. TCGA_pro_clin_nomogram.R - Used to count the clinical information of TCGA, that is, Table 1.
+11. feature_select_TCGA.R - Extract coefficients of 3 genes from TCGA_pro_outcome_TN_log.txt, compare between normal and tumor, get box plot.
