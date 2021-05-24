@@ -25,7 +25,7 @@ l <- 50
 mean(Data[,l])
 var(Data[,l])
 
-## 将时间day转换为year
+## 灏嗘椂闂磀ay杞崲涓簓ear
 # Data$time <- Data$time/365 
 # View(Data[,1:10])
 
@@ -95,7 +95,7 @@ for(i in 1:20){
   cv.ridge = cv.glmnet(x, y, family="cox", alpha = 0, nfolds = 10)
   lambda.min <- cv.ridge$lambda.min
   lambda.1se <- cv.ridge$lambda.1se
-  print("***lambda.min、lambda.1se***")
+  print("***lambda.min銆乴ambda.1se***")
   print(lambda.min)
   print(lambda.1se)
   plot(cv.ridge)
@@ -176,13 +176,13 @@ for(i in 1:20){
   cv.lasso = cv.glmnet(x, y, family="cox", alpha = 1, nfolds = 10)
   lambda.min <- cv.lasso$lambda.min
   lambda.1se <- cv.lasso$lambda.1se
-  print("***lambda.min、lambda.1se***")
+  print("***lambda.min銆乴ambda.1se***")
   print(lambda.min)
   print(lambda.1se)
   plot(cv.lasso)
   
   
-  ## 拟合
+  ## 鎷熷悎
   lasso.model <- glmnet(x, y, family="cox", alpha = 1, lambda = cv.lasso$lambda.min)
   coef_lasso <- as.matrix(coef(lasso.model))
   which(coef_lasso[,1] != 0)
@@ -235,13 +235,13 @@ for(i in 1:20){
   cv.elastic = cv.glmnet(x, y, family="cox", alpha = 0.5, nfolds = 10)
   lambda.min <- cv.elastic$lambda.min
   lambda.1se <- cv.elastic$lambda.1se
-  print("***lambda.min、lambda.1se***")
+  print("***lambda.min銆乴ambda.1se***")
   print(lambda.min)
   print(lambda.1se)
   plot(cv.elastic)
   
   
-  ## 拟合
+  ## 鎷熷悎
   elastic.model <- glmnet(x, y, family="cox", alpha = 0.5, lambda = cv.elastic$lambda.min)
   coef_elastic <- as.matrix(coef(elastic.model))
   which(coef_elastic[,1] != 0)
@@ -280,7 +280,7 @@ write.csv(Ci_elastic, file = "CI_elastic.csv")
 
 
 
-######################### ncvreg -- SCAD 惩罚 #############################
+######################### ncvreg -- SCAD 鎯╃綒 #############################
 
 X <- x
 y <- y
@@ -475,7 +475,7 @@ dev.off()
 ######################### ncpen  Bridge 1/2 #############################
 
 
-x <- model.matrix(status ~., train.data)[,-c(1,2)]   # 删除了time, statuss~.
+x <- model.matrix(status ~., train.data)[,-c(1,2)]   # 鍒犻櫎浜唗ime, statuss~.
 x_hat <- data.frame(x)
 y <- as.matrix(train.data[,c(1,2)])  
 colnames(y) <- c("time", "status")
@@ -523,7 +523,7 @@ plotp_Bridge <- separate2GroupsCox(as.vector(coef_test[[1]]), x1_hat[, coef_test
 P_Bridge <- plotp_Bridge$pvalue
 P_Bridge
 
-setwd("D:\\E\\博士\\R_程序\\BRCA\\Data\\TCGA_NEW\\result\\Bridge")
+                          
 write.csv(coef, file = "coef_Bridge.csv")
 write.csv(coef_Bridge, file = "coef_Bridge.csv")
 write.csv(feature_Bridge, file = "feature_Bridge.csv", row.names = F)
@@ -601,7 +601,7 @@ coef_MCP2 <- my_union_coef(coef_MCP1)
 
 
 
-## 读出 gene 数据
+## 璇诲嚭 gene 鏁版嵁
 write.csv(coef_ridge2, "feature_ridge.csv",row.names = F)
 write.csv(coef_lasso2, "feature_lasso.csv",row.names = F)
 write.csv(coef_Elastic2, "feature_Elastic.csv",row.names = F)
@@ -612,7 +612,7 @@ write.csv(coef_SCAD2, "feature_SCAD.csv",row.names = F)
 write.csv(coef_MCP2, "feature_MCP.csv",row.names = F)
 
 
-# 计算个数 --------------------------------------------------------------------
+# 璁＄畻涓暟 --------------------------------------------------------------------
 sum(coef_ridge2[,1] != 0)
 sum(coef_lasso2[,1] != 0)
 sum(coef_Elastic2[,1] != 0)
@@ -622,7 +622,7 @@ sum(coef_SCAD2[,1] != 0)
 sum(coef_MCP2[,1] != 0)
 
 
-# 计算CI --------------------------------------------------------------------
+# 璁＄畻CI --------------------------------------------------------------------
 Ci_ridge <- read.table("CI_ridge.csv", header=TRUE, sep = ',')
 Ci_lasso <- read.table("CI_lasso.csv", header=TRUE, sep = ',')
 Ci_Elastic <- read.table("CI_elastic.csv", header=TRUE, sep = ',')
@@ -631,7 +631,7 @@ Ci_l0 <- read.table("CI_l0.csv", header=TRUE, sep = ',')
 Ci_SCAD <- read.table("CI_SCAD.csv", header=TRUE, sep = ',')
 Ci_MCP <- read.table("CI_MCP.csv", header=TRUE, sep = ',')
 
-# my_ci 提取20次的ci -----------------------------------------------------
+# my_ci 鎻愬彇20娆＄殑ci -----------------------------------------------------
 
 my_ci <- function(x){
   x1 <- matrix()
@@ -658,7 +658,7 @@ Ci_Bridge1
 mean(Ci_SCAD1)
 mean(Ci_MCP1)
 
-# 计算 P ---------------------------------------------------------------------
+# 璁＄畻 P ---------------------------------------------------------------------
 P_ridge <- read.table("P_ridge.csv", header=TRUE, sep = ',')
 P_lasso <- read.table("P_lasso.csv", header=TRUE, sep = ',')
 P_Elastic <- read.table("P_elastic.csv", header=TRUE, sep = ',')
