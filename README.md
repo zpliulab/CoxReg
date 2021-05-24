@@ -14,3 +14,4 @@ Cox_Reg: A computational method to detect prognostic biomarkers of breast cancer
 10. TCGA_pro_clin_nomogram.R - Used to count the clinical information of TCGA, that is, Table 1.
 11. feature_select_TCGA.R - Extract coefficients of 3 genes from TCGA_pro_outcome_TN_log.txt, compare between normal and tumor, get box plot.
 12. feature_select_NEW.R - Extract univariate_cox_coef.csv data from Independent_data and save it in Data_GEO.
+13. feature_survival_external_index_NEW.R - Extract data from Data_GEO and save it to Xtile.
