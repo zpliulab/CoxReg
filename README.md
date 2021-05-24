@@ -21,3 +21,4 @@ Cox_Reg: A computational method to detect prognostic biomarkers of breast cancer
 17. timeROC_NEW.R -- Use prs_TCGA_for_hiplot.txt to draw ROC curves for 1, 3, and 5 years on TCGA, optimize coordinate axis and legend.
 18. cluster.R -- Enrichment result of 72 genes, threshold=0.05, cluster_GO_NEW.csv is obtained.
 19. Box_sim.R -- Combine results of cluster.R, perform correlation analysis with 23 breast cancer specific GO terms. Select 23 of the top 50 go terms with high correlation and draw a box plot. Get high correlation 6 go terms, return to cluster.R to draw the function.
+20. GSE42568_expr_box.R -- Process gene expression data, without scale, labeling (text, not 0/1).
