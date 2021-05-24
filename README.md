@@ -18,3 +18,4 @@ Cox_Reg: A computational method to detect prognostic biomarkers of breast cancer
 14. xtile.R -- Used to get the KM curve based on the threshold obtained by XTile.
 15. xtile_TCGA.R -- Extract data from TCGA, save it in TCGA_OS_3gene.txt (clinical information + PRS), use the midpoint as cut-off, draw KM curve.
 16. feature_select_TCGA_NEW.R -- Get expression value of 3 genes, TCGA GSE_TCGA_3_ori.txt. Then get prs_TCGA_for_hiplot.txt, use hiplot to draw.
+17. timeROC_NEW.R - Use prs_TCGA_for_hiplot.txt to draw ROC curves for 1, 3, and 5 years on TCGA, optimize coordinate axis and legend.
