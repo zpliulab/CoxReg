@@ -47,3 +47,7 @@ The **serial number (1), (2), ..., (20)** represents the order in which the prog
 * (19) Box_sim.R -- Combine results of cluster.R, perform correlation analysis with 23 breast cancer specific GO terms. Select 23 of the top 50 go terms with high correlation and draw a box plot. Get high correlation 6 go terms, return to cluster.R to draw the function.
 * (20) GSE42568_expr_box.R -- Process gene expression data, without scale, labeling (text, not 0/1).
 <!--END_SECTION:news-->
+
+
+## CoxReg (2021), Zhi-Ping Liu all rights reserved
+This program package is supported by the copyright owners and coders "as is" and without warranty of any kind, express or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. In no event shall the copyright owner or contributor be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, without limitation, procurement of substitute goods or services; loss of use, data, or profits; or business interruption), regardless of the theory of liability, whether in contract, strict liability or tort (including negligence or otherwise) for any use of the software, even if advised of the possibility of such damages.
