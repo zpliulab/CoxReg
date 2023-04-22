@@ -1,4 +1,4 @@
-# [Cox_Reg (Regularized Cox proportional hazards models)](https://github.com/zpliulab/CoxReg)
+# [Cox_Reg: Detecting prognostic biomarkers of breast cancer by regularized Cox proportional hazards models](https://github.com/zpliulab/CoxReg)
 
 [![Screenshot](https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12967-021-03180-y/MediaObjects/12967_2021_3180_Fig1_HTML.png?as=webphttps://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12967-021-03180-y/MediaObjects/12967_2021_3180_Fig1_HTML.png?as=webp)](https://doi.org/10.1186/s12967-021-03180-y)
 
